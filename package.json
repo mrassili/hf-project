@@ -1,0 +1,26 @@
+{
+  "name": "hf-project",
+  "version": "1.0.0",
+  "description": "This project is about developing a responsive web page that replicates the design mockup provided by Hidden Founders for their front-end developer position challenge",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hiddenfounders",
+    "front-end",
+    "webpage",
+    "responsive"
+  ],
+  "author": "Marouane Rassili",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  }
+}
