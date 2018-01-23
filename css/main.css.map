@@ -1,0 +1,1 @@
+"version":3,"sources":["components/_buttons.scss","helpers/_variables.scss"],"names":[],"mappings":"AAAA,QACC,MCDK","file":"main.css","sourcesContent":[".button {\r\n\tcolor: $red;\r\n}","$red: red;"]}

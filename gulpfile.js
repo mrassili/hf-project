@@ -1,42 +1,33 @@
-// Include gulp
 var gulp = require('gulp');
 
-// Include Our Plugins
-var jshint = require('gulp-jshint');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+// Plugins
+var plugins = require('gulp-load-plugins')();
 
-// Lint Task
-gulp.task('lint', function() {
-    return gulp.src('js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
+var sassPath = 'sass/**/*.scss';
 
-// Compile Our Sass
+// Sass task
 gulp.task('sass', function() {
-    return gulp.src('scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('dist/css'));
+	// Gets all .scss files in sass/ and children dirs
+	return gulp.src(sassPath)
+		// Deal with errors
+		.pipe(plugins.plumber(function(error) {
+			console.log(error.toString());
+			this.emit('end');
+		}))
+		.pipe(plugins.sourcemaps.init())
+		// Compile Sass
+		.pipe(plugins.sass())
+		// Minify main.css
+		.pipe(plugins.minifyCss())
+		// Write sourcemap
+		.pipe(plugins.sourcemaps.write('.'))
+		// Rename main.css to main.min.css
+ 		.pipe(plugins.rename('main.min.css'))
+		// Write main.min.css
+		.pipe(gulp.dest('css'))
 });
 
-// Concatenate & Minify JS
-gulp.task('scripts', function() {
-    return gulp.src('js/*.js')
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
-        .pipe(rename('all.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
-});
-
-// Watch Files For Changes
+// Watch task
 gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
-    gulp.watch('scss/*.scss', ['sass']);
+	gulp.watch(sassPath, ['sass']);
 });
-
-// Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);

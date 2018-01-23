@@ -1,0 +1,32 @@
+// Sass helpers
+@import 
+	'helpers/variables',
+	'helpers/functions',
+	'helpers/mixins',
+	'helpers/placeholders';
+
+// Base stuff
+@import 
+	'base/reset',
+	'base/fonts',
+	'base/typography',
+	'base/colors';
+
+// Layout related styles
+@import
+	'layout/grid',
+	'layout/header',
+	'layout/footer';
+
+// Components
+@import
+	'components/headings',
+	'components/dropdowns',
+	'components/buttons',
+	'components/images',
+	'components/search-forms';
+
+// Page-specific styles
+@import
+	'pages/index',
+	'pages/home';
