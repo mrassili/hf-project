@@ -4,7 +4,7 @@
   "description": "This project is about developing a responsive web page that replicates the design mockup provided by Hidden Founders for their front-end developer position challenge",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "index.html"
   },
   "keywords": [
     "hiddenfounders",
