@@ -1,0 +1,13 @@
+.index {
+	background: {
+		image: url(../imgs/index-bg.png);
+		position: 0 0;
+		size: 100%;
+		repeat: no-repeat;
+		attachment: fixed;
+		color: $dark-background;
+	}
+	background-blend-mode: multiply;
+	width: 100vw;
+	height: 100vh;
+}

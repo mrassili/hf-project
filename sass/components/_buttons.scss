@@ -1,3 +1,13 @@
-.button {
-	color: $red;
+.round-button {
+	display: table-cell; // To be able to set width & height
+	color: $button-font-color;
+	background: $button-background-color;
+	width: 223px;
+	height: 45px;
+	border-radius: $round-button;
+	font-size: $button-font-size;
+	font-family: $button-font-family;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
 }

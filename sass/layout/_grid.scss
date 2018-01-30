@@ -1,0 +1,14 @@
+.index { // Parent grid
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+.index-content { // Child grid (heading AND button)
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	grid-gap: 100px;
+}
+.btn { // Center the button horizontally
+	justify-self: center;
+}
