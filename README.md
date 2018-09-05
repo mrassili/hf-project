@@ -2,6 +2,8 @@
 
 This project is about developing a responsive web page that replicates the design mockup provided by Hidden Founders for their front-end developer position challenge
 
+(This project is unmaintained for the time being)
+
 ## Setup
 
 If you already have NodeJS installed, you can just clone the project
